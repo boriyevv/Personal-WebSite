@@ -15,59 +15,77 @@
 
             &__category-text {
                 display: inline-block;
-                color: var(--yellow-theme-main-color);
+                color: var(--yellow-theme-sub-text-color);
                 font-size: 22px;
                 font-weight: 700;
                 line-height: 1rem;
                 letter-spacing: 0.5px;
                 position: relative;
                 text-transform: uppercase;
-                padding: 5px 10px;
+                cursor: pointer;
+                padding: 10px 10px;
                 border-bottom: 2px solid var(--yellow-theme-main-color);
+
+                &:hover {
+                    color: var(--yellow-theme-main-color);
+                    transition: all 0.4s ease;
+                }
             }
-            &__category-text::before, &__category-text::after{
+
+            &__category-text::before,
+            &__category-text::after {
                 position: absolute;
-                content: "1";
+                content: " ";
+                width: 3px;
                 height: 5px;
                 background-color: var(--yellow-theme-main-color);
-                bottom:1px;
+                color: var(--yellow-theme-main-color);
+                bottom: 1px;
             }
-            &__category-text::before{
+
+            &__category-text::before {
                 left: 0;
             }
-            &__category-text::after{
+
+            &__category-text::after {
                 right: 0;
             }
 
-            div{
+
+            div {
                 width: 100%;
             }
 
-            .progressbar-wrapper{
+            .progressbar-wrapper {
                 padding: 50px 0px 0px 0px;
 
 
-                p{
+                p {
                     font-size: 1.6rem;
                     margin: 0 0 10px;
                     font-weight: 500;
                     text-transform: uppercase;
                     color: var(--yellow-theme-sub-text-color);
+
+                    &:hover {
+                        color: var(--yellow-theme-main-color);
+                        transition: all 0.4s ease;
+                    }
                 }
             }
         }
     }
 }
 
-@media only screen and (max-width:768px){
-    .skills{
-        &__content-wrapper{
+@media only screen and (max-width:768px) {
+    .skills {
+        &__content-wrapper {
             flex-direction: column;
 
         }
     }
 
-    .skills__content-wrapper__inner-content__progressbar-container{
+    .skills__content-wrapper__inner-content__progressbar-container {
         margin-bottom: 20px;
     }
 }

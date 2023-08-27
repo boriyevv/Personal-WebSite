@@ -1,12 +1,59 @@
-import React from "react";
+import React, { useRef, useState } from "react";
 import PageHeaderContent from "../../components/pageHeaderContent";
 import { IoIosContact } from "react-icons/io";
 import { Animate } from 'react-simple-animate';
+import emailjs from '@emailjs/browser'
+import {  ToastContainer, toast } from 'react-toastify'
+import 'react-toastify/dist/ReactToastify.css';
 import './styles.scss'
+
+
 
 
 const Contact = () => {
 
+    const [clearForm, setClearForm] = useState("")
+    const [clearForm2, setClearForm2] = useState("")
+    const [clearForm3, setClearForm3] = useState("")
+
+    
+
+    
+    const form = useRef()
+    const sendEmail = (e) => {
+        e.preventDefault();
+
+        emailjs.sendForm('service_t9ropga', 'template_l8hmaf6', form.current, '-rLZhKVYdonU19P31')
+            .then((result) => {
+                if (result.text) {
+
+                    toast.success('Email Sent Succesfully', {
+                        position: toast.POSITION.TOP_RIGHT
+
+                    });
+                }
+                else {
+                    toast.error("Email can not sent", {
+                        position: toast.POSITION.TOP_RIGHT
+                    })
+                }
+            }, (error) => {
+                console.log(error.text);
+            });
+
+            setClearForm("")
+            setClearForm2("")
+            setClearForm3("")
+
+        };
+        
+        // const handleClear = (event)=>{
+        //     event.preventDefault()
+        //     setClearForm("")
+        //     setClearForm2("")
+        //     setClearForm3("")
+    
+        // }
     return (
         <section id="contact" className="contact">
             <PageHeaderContent
@@ -52,28 +99,30 @@ const Contact = () => {
                         }
                     }
                 >
-                    <div className="contact__content__form">
+                    <form ref={form} onSubmit={sendEmail} className="contact__content__form">
 
                         <div className="contact__content__form__controlsWrapper">
                             <div className="nameWrapper">
-                                <input required name="name" className="inputName" type={'text'} />
+                                <input value={clearForm} onChange={(e)=> setClearForm(e.target.value)} required name="user_name" className="inputName" type={'text'} />
                                 <label htmlFor="name" className="nameLabel">Name</label>
                             </div>
                             <div className="emailWrapper">
-                            <input required name="email" className="inputEmail" type={'email'} />
+                                <input value={clearForm2} onChange={(e)=> setClearForm2(e.target.value)}  required name="user_email" className="inputEmail" type={'email'} />
                                 <label htmlFor="email" className="emailLabel">E-mail</label>
                             </div>
                             <div className="descWrapper">
-                            <textarea rows='5' required name="desc" className="inputDesc" type={'text'} />
+                                <textarea value={clearForm3} onChange={(e)=> setClearForm3(e.target.value)} rows='5' required name="message" className="inputDesc" />
                                 <label htmlFor="desc" className="descLabel">Write here</label>
                             </div>
                         </div>
-                        <button>Submit</button>
+                        <button type="submit" value="send">Submit</button>
 
-                    </div>
+
+                    </form>
                 </Animate>
 
             </div>
+                        <ToastContainer />
         </section>
     )
 

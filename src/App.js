@@ -1,5 +1,5 @@
 import './App.scss';
-import { Routes, Route, useLocation } from 'react-router-dom'
+import { Routes, Route,  } from 'react-router-dom'
 import Particles from 'react-tsparticles';
 import { loadFull } from 'tsparticles';
 import Home from './containers/home';
@@ -15,7 +15,7 @@ import particles from './utils.js/particles';
 
 function App() {
 
-  const location = useLocation()
+  // const location = useLocation()
   // console.log(location)
 
   const handleInit = async (main) => {
@@ -23,7 +23,7 @@ function App() {
   }
 
 
-  const renderParticleJsInHomePage = location.pathname === "/"
+  // const renderParticleJsInHomePage = location.pathname === "/"
 
 
   return (
@@ -31,7 +31,7 @@ function App() {
       {/* Particles js */}
 
       {
-        renderParticleJsInHomePage && (<Particles id='particles' options={particles} init={handleInit} />
+        (<Particles id='particles' options={particles} init={handleInit} />
         )}
 
 

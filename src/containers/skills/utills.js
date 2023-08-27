@@ -14,7 +14,7 @@ export const skillsData = [
             },
             {
                 skillName : "JavaScript",
-                percentage : "70"
+                percentage : "80"
             },
             {
                 skillName : "TypeScript",
@@ -32,29 +32,7 @@ export const skillsData = [
             },
             {
                 skillName : "Next Js",
-                percentage : "70"
-            },
-            {
-                skillName : "Vue  Js",
-                percentage : "50"
-            },
-            {
-                skillName : "Angular  Js",
-                percentage : "30"
-            },
-        ]
-    },
-
-    {
-        label: "Other Technologies",
-        data:[
-            {
-                skillName : "Sass",
-                percentage : "90"
-            },
-            {
-                skillName : "BootStrap",
-                percentage : "100"
+                percentage : "60"
             },
             {
                 skillName : "TaailWind Css",
@@ -62,6 +40,28 @@ export const skillsData = [
             },
             {
                 skillName : "MUI",
+                percentage : "70"
+            },
+        ]
+    },
+
+    {
+        label: "Other Skills",
+        data:[
+            {
+                skillName : "Creativity",
+                percentage : "80"
+            },
+            {
+                skillName : "Sense of Humuor",
+                percentage : "90"
+            },
+            {
+                skillName : "Responsibility",
+                percentage : "90"
+            },
+            {
+                skillName : "Russian, English Language",
                 percentage : "70"
             },
         ]

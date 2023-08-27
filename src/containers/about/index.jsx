@@ -5,6 +5,7 @@ import { Animate } from 'react-simple-animate'
 import { DiApple, DiAndroid } from 'react-icons/di'
 import { FaDev, FaDatabase } from 'react-icons/fa'
 import './styles.scss'
+import { Link } from "react-router-dom";
 
 
 const personalDetails = [
@@ -20,17 +21,17 @@ const personalDetails = [
         label: "Address",
         value: "Uzbekistan"
     },
-    {
-        label: "Email",
-        value: "boriyevdev08@gmail.com"
-    },
-    {
-        label: "Contact No",
-        value: "+998 90) 443-55-67"
-    }
+    // {
+    //     label: "Email",
+    //     value: "boriyevdev08@gmail.com"
+    // },
+    // {
+    //     label: "Contact No",
+    //     value: "+998 90) 443-55-67"
+    // }
 ]
 
-const jobSummary = 'I am a FrontEnd developer with a year of experiance. I learned programming at Najot Ta`lim and now I have a strong knowledge from web development. I took part some projects during my study time, and then worked at small IT Team as a FrontEnd developer. As a mad of learning and coding I also want to share my knowledge to others, and now working part time at IT Park as a FronEnd mentor, who teaches students from HTML, CSS basics, JavaScript and it`s framework ReactJs.'
+const jobSummary = 'I am a FrontEnd developer with a year of experience. I learned programming at Najot Ta`lim and now I have a strong knowledge from web development. I took part some projects during my study time, and then worked at small IT Team as a FrontEnd developer. As a mad of learning and coding I also want to share my knowledge to others, and now working part time at IT Park as a FrontEnd mentor, who teaches students from HTML, CSS basics, JavaScript and it`s framework ReactJs.'
 
 
 const About = () => {
@@ -81,10 +82,20 @@ const About = () => {
                                 personalDetails.map((item, i) => (
                                     <li key={i}>
                                         <span className="title">{item.label}</span>
-                                        <span className="value">{item.value}</span>
+                                        <Link className="value">{item.value}</Link>
                                     </li>
+
+
                                 ))
                             }
+                            <li>
+                                <span className="title">E-Mail</span>
+                                <Link className="value" to="mailto:boriyevdev08@gmail.com">boriyevdev08@gmail.com</Link>
+                            </li>
+                            <li>
+                                <span className="title">Tel Number</span>
+                                <Link className="value" to="tel:+998976430818">90 443-55-67</Link>
+                            </li>
                         </ul>
 
                     </Animate>

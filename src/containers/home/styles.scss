@@ -21,7 +21,7 @@
             position: relative;
             overflow: hidden;
             white-space: nowrap;
-            animation: typingEffectAnimation 3.5s steps(100,end) infinite;
+            animation: typingEffectAnimation 8s steps(100,end) infinite;
             
         }
     }
@@ -30,6 +30,7 @@
         display: flex;
         justify-content: center;
         margin-top: 20px;
+        
 
         button{
             cursor: pointer;
@@ -41,9 +42,10 @@
             border-radius: 4px;
             font-weight: 500;
             
+            
             &:hover{
                 background-color: var(--yellow-theme-main-color);
-                color: #000;
+                color: white;
                 transition: all 0.3s ease-in-out;
             }
         }
@@ -74,10 +76,13 @@
 }
 
 @keyframes typingEffectAnimation{
-    from{
+    0%{
         width: 0;
     }
-    to{
+    50%{
         width: 100%
+    }
+    100%{
+        width: 0;
     }
 }

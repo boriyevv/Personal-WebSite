@@ -50,6 +50,12 @@
                     color: var(--yellow-theme-main-color);
                     text-decoration: none;
                     padding: 0.5rem;
+                    
+
+                    &:hover{
+                        color: white;
+                        transition: all ease 0.5s;
+                    }
                 }
             }
 

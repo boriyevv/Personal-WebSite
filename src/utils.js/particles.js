@@ -4,10 +4,10 @@
 export default {
     background: {
         color: {
-            value: "#181819",
+            value: "#181818",
         },
     },
-    fpsLimit: 120,
+    fpsLimit: 90,
     interactivity: {
         events: {
             onClick: {
@@ -22,24 +22,24 @@ export default {
         },
         modes: {
             push: {
-                quantity: 4,
+                quantity: 10,
             },
             repulse: {
-                distance: 200,
-                duration: 0.4,
+                distance: 100,
+                duration: 0.5,
             },
         },
     },
     particles: {
         color: {
-            value: "#F00",
+            value: "#fff",
         },
         links: {
             color: "#F00",
             distance: 150,
             enable: true,
-            opacity: 0.5,
-            width: 1,
+            opacity: 0.7,
+            width: 2,
         },
         move: {
             direction: "none",
@@ -48,13 +48,13 @@ export default {
                 default: "bounce",
             },
             random: false,
-            speed: 6,
+            speed: 4,
             straight: false,
         },
         number: {
             density: {
                 enable: true,
-                area: 800,
+                area:800,
             },
             value: 80,
         },
