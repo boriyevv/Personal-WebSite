@@ -9,7 +9,7 @@ const Home = () => {
     const navigate = useNavigate()
 
     const navigateToContact = () => {
-        navigate('/contcat')
+        navigate('/contact')
 
     }
 

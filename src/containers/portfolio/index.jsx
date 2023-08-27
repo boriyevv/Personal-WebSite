@@ -10,6 +10,7 @@ import image6 from '../../images/image6.jpg'
 // import { Link } from "react-router-dom";
 import './styles.scss'
 import { useState } from "react";
+import { Link } from "react-router-dom";
 
 const portfolioData = [
     {
@@ -117,9 +118,9 @@ const Portfolio = () => {
 
 
                                 <div className="portfolio__content__cards__item__img-wrapper">
-                                    <a>
+                                    <Link className="link">
                                         <img src={item.image} alt="Data" />
-                                    </a>
+                                    </Link>
                                 </div>
 
                                 <div className="overlay">
@@ -127,7 +128,7 @@ const Portfolio = () => {
                                         index === hovered && (
                                             <div>
                                                 <p>{item.name}</p>
-                                                <button><a href={item.link} target="_blank">Visit</a></button>
+                                                <button><Link className="btnLink" to={item.link} target="_blank">Visit</Link></button>
                                             </div>
                                         )
                                     }
