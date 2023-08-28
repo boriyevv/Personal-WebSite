@@ -7,7 +7,7 @@ export default {
             value: "#181818",
         },
     },
-    fpsLimit: 90,
+    fpsLimit: 45,
     interactivity: {
         events: {
             onClick: {
@@ -22,7 +22,7 @@ export default {
         },
         modes: {
             push: {
-                quantity: 10,
+                quantity: 5,
             },
             repulse: {
                 distance: 100,

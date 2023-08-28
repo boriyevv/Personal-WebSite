@@ -23,7 +23,7 @@ const Contact = () => {
     const sendEmail = (e) => {
         e.preventDefault();
 
-        emailjs.sendForm('service_t9ropga', 'template_l8hmaf6', form.current, '-rLZhKVYdonU19P31')
+        emailjs.sendForm('service_0dtz8qe', 'template_du02is7', form.current, '-rLZhKVYdonU19P31')
             .then((result) => {
                 if (result.text) {
 
@@ -115,7 +115,7 @@ const Contact = () => {
                                 <label htmlFor="desc" className="descLabel">Write here</label>
                             </div>
                         </div>
-                        <button type="submit" value="send">Submit</button>
+                        <button type="submit" value="Send">Submit</button>
 
 
                     </form>
